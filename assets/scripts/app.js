@@ -48,3 +48,52 @@ console.log(
     ' ' +
     'million'
 );
+
+function createCombine(a, b, c) {
+  return (a * b) / c;
+}
+const firstCombination = createCombine(12, 34, 94);
+console.log(firstCombination);
+
+class User {
+  constructor(firstName, secondName, age) {
+    this.firstName = firstName;
+    this.secondName = secondName;
+    this.age = age;
+  }
+  createGreet(message) {
+    console.log(message);
+  }
+}
+
+const userOne = new User('Vugar', 'Gasimov', 25);
+console.log(userOne);
+userOne.createGreet('Hello dear guests');
+
+const hobbies = ['driving', 'swimming', 'reading'];
+console.log(hobbies[1]);
+hobbies.push('running');
+
+const index = hobbies.findIndex((item) => item === 'running');
+
+console.log(index);
+
+const editedHobbies = hobbies.map((item) => ({ text: item }));
+console.log(editedHobbies);
+/*
+function transformToObjects(a, b, c) {
+  const args = [a, b, c]; // Create an array containing the arguments
+  return args.map((item) => ({ val: item })); // Map over the array and transform each item into an object with the key 'val'
+}
+
+// Example usage:
+const result = transformToObjects(1, 2, 3);
+console.log(result);
+*/
+
+function transformToObjects(numbers) {
+  return numbers.map((item) => ({ val: item }));
+}
+
+const result = transformToObjects([1, 2, 3]);
+console.log(result);
